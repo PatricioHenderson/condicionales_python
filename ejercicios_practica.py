@@ -27,18 +27,53 @@ def ej1():
     numero_2 = int(input('Ingrese el segundo número:\n'))
 
     # Compare cual de los dos números es mayor
+    if numero_1 > numero_2 :
+
+        print ("El numero {} es mayor" .format(numero_1) )
+    
+    elif numero_1 < numero_2 :
+
+        print ("El numero {} es mayor" .format(numero_2) )
+        
+
+
     # Imprima en pantalla según corresponda
 
     # Verifique si el numero_1 positivo, negativo o cero
     # Imprima el resultado en cada caso
-
+    if numero_1 > 0:
+ 
+        print ("El numero {} es mayor que cero" .format(numero_1))
+ 
+    elif numero_1 == 0:
+ 
+        print ("El numero {} es cero" .format(numero_1))
+ 
+    else:
+ 
+        print ("El numero {} es menor que cero" .format(numero_1))
     # Verifique si el numero_1 es mayor a 0 y menor a 100
     # Imprima en pantalla si se cumple o no la condición
+
+    if numero_1 > 0 and numero_1 < 100:
+ 
+        print ("el numero esta entre 0 y 100")
+
+    else:
+
+        print("No cumple condición entre 0 y 100")   
 
     # Verifique si el numero_1 es menor a 10 o el numero_2
     # es mayor a -2
     # Imprima en pantalla si se cumple o no la condición
 
+    if numero_1 < 10 or numero_2 > -2:
+
+        print ("Se cumple la última condición")  
+    
+    else:
+
+        print ("No se cumple la última condición")
 
 def ej2():
     # Ejemplos variables de texto
@@ -52,23 +87,78 @@ def ej2():
 
     # Compare cual de las dos palabras es mayor (alfabéticamente)
     # Imprima en pantalla según corresponda
+    if texto_1 > texto_2 :
+       
+        print ("{} es mayor alfabéticamente" .format(texto_1))
+    
+    elif texto_1 == texto_2:
 
+        print ("Son iguales alfabeticamete")
+
+    else:
+    
+        print ("{} es mayor alfabéticamente" .format(texto_2))
     # Compare cual de las dos palabras tiene mayor
     # cantidad de letras
     # Imprima en pantalla según corresponda
 
+    if len(texto_1) > len(texto_2) :
+
+        print ("{} Tiene más letras" .format(texto_1))
+
+    elif len(texto_1) == len(texto_2) :
+
+        print ("Ambas tienen la misma cantidad de letras")
+
+    else:
+
+        print ("{} Tiene más letras " .format(texto_2))
+        
+
     # Verifique si la primera letra de la primera palabra
     # es mayor a la primera letra de la segunda palabra
     # Imprima en pantalla según corresponda
+
+    inicial_1= texto_1[0]
+
+    inicial_2= texto_2[0]
+
+    if inicial_1 > inicial_2:
+        
+        print ("La inicial {} de la palabra {} es mayor" .format(inicial_1 , texto_1))
+
+    elif inicial_1 < inicial_2:
+
+        print ("La inicial {} de la palabra {} es mayor" .format(inicial_2 , texto_2))
+
+    else :
+        
+        print ("Son iguales")
+        
 
     copia_texto_1 = texto_1  # Copia de la variable texto_1
 
     # Verifique que copia_texto_1 es igual a texto_1
     # Imprima en pantalla según corresponda
 
+    if copia_texto_1 == texto_1 :
+
+        print ("Las copias son iguales ")
+
+    else: 
+
+        print ("Las copias son distintas")
+
     # Verifique que copia_texto_1 es distinta a texto_2
     # Imprima en pantalla según corresponda
 
+    if copia_texto_1 != texto_2 :
+
+        print ("los textos {} {} son distintos" .format(copia_texto_1,texto_2))
+
+    else:
+        
+        print ("los textos son iguales")
 
 def ej3():
     # Ejercicios de práctica numérica
@@ -87,6 +177,24 @@ def ej3():
     #       --> En caso afirmativo imprima en pantalla "Resp=3"
     #       --> En caso negativo imprima en pantalla "Resp=4"
 
+
+    if numero_1 > 5 :
+
+        if numero_1 > 2:
+
+            print ("Resp=1")
+        
+        else :
+
+            print ("Resp=2")
+
+    elif numero_2 > 5 :
+        
+        print ("Resp=3")
+    
+    else :
+
+        print ("Resp=4")
     # Verifique la calificación de un estudiante según su
     # puntaje en un examen
     puntaje = 70
@@ -99,8 +207,30 @@ def ej3():
 
     # Debe imprimir en pantalla la calificacion
     # Utilizar "if" anidados
+    if 100 < puntaje >= 90:
+        
+        print ("A")
 
+    elif  90 > puntaje >= 80 :
 
+        print("B")
+
+    elif  80 > puntaje >= 70 :
+        
+        print ("C")
+    
+    elif 70 > puntaje >= 60 :
+
+        print ("D")
+    
+    elif 60 > puntaje >=0  :
+        
+        print ("F")
+
+    else:
+
+        print ("Dato incorrecto")
+        
 def ej4():
     # Ejemplos variables de texto
 
@@ -109,24 +239,42 @@ def ej4():
 
     # Verifique cual cual de los dos textos es mayor alfabéticamente
     # Imprima en pantalla según corresponda
+    if texto_1 > texto_2 :
+
+        print ("{} Es mayor" .format(texto_1))
+    
+    else:
+
+        print ("{} Es mayor" .format(texto_2))
+
 
     # Transforma esas variables tipo texto y almacénalas
+    texto_3= str(texto_1)
+    
+    texto_4= str(texto_2)
     # en nuevas variables númericas (int)
     # Repita el proceso, ¿Cuál de las nuevas variables es mayor?
     # Imprima en pantalla según corresponda
+    if texto_3 > texto_4 :
+        
+        print ("{} es mayor " .format(texto_3))
+    
+    else:
 
+        print ("{} es mayor " .format(texto_4))
+    
     # Para pensar!
     # ¿Por qué cree que texto_2 es mayor a texto_1?
     # Siendo números tiene sentido, pero son caracteres, texto,
     # aún así el operador arroja el mismo resultado que con las
     # variables numéricas, cierto? ¿Por qué creen que es así?
     # Esta pregunta estará repetida en el Campus para que puedan
-    # responder.
+    # responder
     # NOTA: La respuesta no se encuentra en el apunte, sino en Google ;)
 
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
-    #ej1()
-    #ej2()
-    #ej3()
-    #ej4()
+    ej1()
+    ej2()
+    ej3()
+    ej4()
